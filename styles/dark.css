@@ -1,0 +1,18 @@
+:root.theme-dark {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --button-color-transperancy: #ff007066;
+  --theme-color: #ff0070;
+  --accent-color: #ff0070;
+  --decoration-color: #ff0070;
+  --decoration-color-element: #ff007080;
+  --title-color: #db00ff;
+  --display_switch: flex;
+  --subtitle-color: #000028;
+}
+
+
+.theme-dark .page {
+
+}

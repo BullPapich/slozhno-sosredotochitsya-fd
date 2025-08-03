@@ -1,0 +1,476 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "IBM Plex mono", Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  margin: 0 auto;
+  padding: 0;
+  line-height: 1.4625rem;
+}
+
+/*Шапка*/
+
+.header {
+  height: 100vh;
+  min-height: 41.75rem;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header__theme-menu {
+  grid-row: 1 / 2;
+  justify-self: self-end;
+  margin-block-start: 4rem;
+}
+
+.header__theme-menu-list {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  list-style: none;
+  gap: 0.725rem;
+}
+
+.header__theme-menu-item button {
+  color: var(--theme-color);
+  background-color: transparent;
+  border: none;
+  min-width: 4.375rem;
+  min-height: 1.625rem;
+  line-height: 1rem;
+}
+
+.header__theme-menu-item button:disabled {
+  border: 1px solid var(--theme-color);
+}
+
+.header__theme-menu-item button:not(:disabled):hover {
+  border: 1px solid var(--button-color-transperancy);
+}
+
+.header__theme-menu-item button:not(:disabled):focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--theme-color);
+}
+
+.header-decoration {
+  position: absolute;
+  top: 0.625rem;
+  right: 1.1rem;
+  display: var(--display_switch);
+  grid-auto-flow: column;
+  justify-self: end;
+  align-items: center;
+  inset-inline-end: 16px;
+  gap: 0.625rem;
+  width: 3.25rem;
+  height: 1.625rem;
+  font-size: 1em;
+  color: var(--decoration-color);
+  background-color: transparent;
+  border: none;
+  line-height: 1.5625rem;
+}
+
+.header-decoration::after {
+  content: "";
+  min-width: 0.8rem;
+  min-height: 0.8rem;
+  background-color: var(--decoration-color);
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0px 0px 4px 2px var(--decoration-color-element);
+}
+
+.angle {
+  position: relative;
+  overflow: visible;
+}
+
+.angle::before {
+  content: "";
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-style: solid;
+  border-color: var(--theme-color);
+  border-width: 1px 1px 0 0;
+}
+
+.angle::after {
+  content: "";
+  position: absolute;
+  left: 0.625rem;
+  bottom: 0.625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-style: solid;
+  border-color: var(--theme-color);
+  border-width: 0 0 1px 1px;
+}
+
+.header__text {
+  display: block;
+  font-weight: 700;
+  color: rgba(0, 0, 40, 1);
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.4625rem;
+  align-self: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* Мэйн */
+
+main,
+footer {
+  background-color: var(--bg-color);
+}
+
+.section {
+  text-wrap: wrap;
+}
+
+.why {
+  padding-block-start: 2.4rem;
+  margin-inline-start: 0.62rem;
+}
+
+.card {
+  padding-block-start: 1.4rem;
+  max-width: 350px;
+}
+
+.reasons {
+  padding-block-start: 2.8rem;
+  margin-inline-start: 0.62rem;
+}
+
+.solution {
+  padding-block-start: 2.8rem;
+  margin-inline-start: 0.62rem;
+}
+
+.solution .card-title {
+  margin-block-start: 1rem;
+}
+
+.solution .card {
+  padding-block-start: 0.9rem;
+}
+
+.gallery {
+  padding-block-start: 4.2rem;
+  margin-inline-start: 0.62rem;
+  min-width: auto;
+  box-sizing: border-box;
+  padding-block-end: 40px;
+}
+
+.gallery {
+  display: grid;
+  gap: 0.625rem;
+}
+
+.gallery img {
+  width: 22.1875rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery h2 {
+  display: block;
+}
+
+/* Футер */
+
+.footer {
+  margin: 0;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Текст*/
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 0.125rem 0.125rem 0 var(--accent-color);
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color);
+}
+
+a:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+main {
+  font-size: 1.125rem;
+}
+
+.title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  font-weight: 700;
+  text-shadow: 0.25rem 0.25rem 0 var(--accent-color);
+  line-height: 0.83;
+  align-self: start;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.subtitle {
+  color: var(--theme-color);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--subtitle-color);
+  margin: 0 0 0.625rem 0;
+}
+
+.card-solution-title {
+  color: var(--subtitle-color);
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0 0 0.625rem 0;
+}
+
+.footer__text {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  color: var(--title-color);
+  text-shadow: 0.25rem 0.25rem 0 #ff0070;
+  font-weight: 700;
+  margin: 0 auto;
+  line-height: 0.83;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 1.25rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header__theme-menu {
+    grid-column: 1/3;
+    margin-block-start: 10.7rem;
+  }
+
+  .header-decoration {
+    top: 1.15rem;
+  }
+
+  .angle::before {
+    top: 0.2rem;
+    right: 0.2rem;
+  }
+
+  .angle::after {
+    left: 1.25rem;
+    bottom: 1.25rem;
+  }
+
+  .title {
+    margin-left: -1.5rem;
+    grid-column: 1/3;
+  }
+
+  .header__text {
+    grid-column: 2/3;
+  }
+
+  .card {
+    padding-block-start: 0;
+    max-width: 100%;
+  }
+
+  .why {
+    padding-top: 3.9rem;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 0.83em;
+  }
+
+  .why .subtitle {
+    grid-column: 1;
+  }
+
+  .why .card {
+    grid-column: 2;
+  }
+
+  .reasons {
+    margin-inline-start: 1.2rem;
+    margin-block-start: 2.2rem;
+  }
+  .reasons .subtitle {
+    max-width: 200px;
+  }
+
+  .reasons .card {
+    margin-block-start: 1.6rem;
+  }
+
+  .solution {
+    padding-block-start: 4rem;
+    margin-inline-start: 0.62rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 0.83em;
+  }
+
+  .solution .subtitle {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .solution .card {
+    grid-column: 1/3;
+  }
+
+  .solution .card-title,
+  .solution .card {
+    grid-column: 2;
+  }
+
+  .solution .card-title {
+    margin-block-start: 0;
+  }
+
+  .solution .card {
+    padding-block-start: 0;
+  }
+
+  .gallery {
+    padding-block-start: 8rem;
+    margin-inline-start: 1rem;
+  }
+
+  .gallery {
+    grid-template: repeat(3, auto) / repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
+  .image_sunset {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  .image_tape {
+    grid-column: 1;
+    grid-row: 3/5;
+  }
+
+  .image_ice-cream {
+    grid-column: 3;
+    grid-row: 2/4;
+  }
+
+  .image_books {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .image_street {
+    grid-column: 2/4;
+    grid-row: 4;
+  }
+
+  .gallery h2 {
+    grid-column: 1 / -1;
+    grid-row: 0;
+  }
+
+  footer {
+    margin-top: 3.75rem;
+    min-height: 64rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    margin: 0;
+    justify-self: center;
+  }
+  .angle::before {
+    top: 1.2rem;
+    right: 0.2rem;
+  }
+  .header-decoration {
+    right: 1rem;
+    font-size: 1.2em;
+  }
+
+  .header__text {
+    margin-inline-start: 0.9rem;
+    line-height: 1rem;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, 4.375rem);
+  }
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .reasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.83em;
+  }
+
+  .reasons .card {
+    margin-block-start: 0rem;
+  }
+
+  .reasons .subtitle {
+    max-width: 315px;
+    grid-column: 1 / -1;
+  }
+
+  .solution {
+    margin-block-start: 1.5rem;
+    margin-inline-start: 1rem;
+  }
+
+  .gallery {
+    margin-inline-start: 1.3rem;
+    padding-block-start: 6rem;
+  }
+
+  footer {
+    min-height: 48rem;
+  }
+}
